@@ -2,28 +2,18 @@ pipeline {
 
     agent any
 
-    stages {
+    stage {
 
-        stage("build") {
+        stage('Git Checkout') {
 
-            steps {
-                echo 'building my application...'
+            step {
+
+                scripts {
+
+                    git 'https://github.com/ahmedgithub-node1/MyKubernetes.git '
+                }
             }
-        }
 
-        stage("test") {
-
-            steps {
-                git 'https://github.com/ahmedgithub-node1/MyKubernetes.git'
-            }
-        }
-
-        stage("deploy") {
-
-            steps {
-                echo 'deployimg my application...'
-            }
         }
     }
-
 } 
