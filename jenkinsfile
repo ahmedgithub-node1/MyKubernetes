@@ -14,7 +14,7 @@ pipeline {
         stage("test") {
 
             steps {
-                git 'https://github.com/ahmedgithub-node1/MyKubernetes.git'
+                echo 'testing my application...'
             }
         }
 
