@@ -4,8 +4,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/ahmedgithub-node1/MyKubernetes.git',
-            credentialsId: 'your-credentials-id'
+        git 'https://github.com/ahmedgithub-node1/MyKubernetes.git'
       }
     }
     stage('Build') {
