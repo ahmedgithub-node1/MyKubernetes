@@ -14,7 +14,7 @@ pipeline {
         stage("test") {
 
             steps {
-                echo 'testing my application...'
+                git branch: 'main', url: 'https://github.com/ahmedgithub-node1/NEW-KUBEE.git'
             }
         }
 
