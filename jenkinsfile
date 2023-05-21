@@ -1,21 +1,29 @@
 pipeline {
-  agent any
-  tools {nodejs "node" }
-  stages {
-    stage('Cloning Git') {
-      steps {
-        git 'https://github.com/ahmedgithub-node1/MyKubernetes.git'
-      }
+
+    agent any
+
+    stages {
+
+        stage("build") {
+
+            steps {
+                echo 'building my application...'
+            }
+        }
+
+        stage("test") {
+
+            steps {
+                git 'https://github.com/ahmedgithub-node1/MyKubernetes.git'
+            }
+        }
+
+        stage("deploy") {
+
+            steps {
+                echo 'deployimg my application...'
+            }
+        }
     }
-    stage('Build') {
-       steps {
-         sh 'npm install'
-       }
-    }
-    stage('Test') {
-      steps {
-        sh 'npm test'
-      }
-    }
-  }
-}
+
+}  
