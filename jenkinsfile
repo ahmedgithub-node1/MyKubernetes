@@ -14,7 +14,7 @@ pipeline {
         stage("test") {
 
             steps {
-                git branch: 'main', url: 'https://github.com/ahmedgithub-node1/NEW-KUBEE.git'
+                git 'https://github.com/ahmedgithub-node1/MyKubernetes.git'
             }
         }
 
