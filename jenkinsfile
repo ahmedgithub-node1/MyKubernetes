@@ -1,19 +1,29 @@
-pipeline{
+pipeline {
 
     agent any
 
-    stage{
+    stages {
 
-        statge('Git Checkout'){
+        stage("build") {
 
-            steps{
-
-                scrips{
-
-                    git 'https://github.com/ahmedgithub-node1/MyKubernetes.git '
-                }
+            steps {
+                echo 'building my application...'
             }
+        }
 
+        stage("test") {
+
+            steps {
+                echo 'testing my application...'
+            }
+        }
+
+        stage("deploy") {
+
+            steps {
+                echo 'deployimg my application...'
+            }
         }
     }
-}
+
+}    
